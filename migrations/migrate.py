@@ -1,6 +1,5 @@
 import os
 import psycopg2
-# import MySQLdb
 import pymysql
 pymysql.install_as_MySQLdb()
 
@@ -19,7 +18,8 @@ MYSQL = {
 }
 
 TABLES_LIST = [
-    'objects'
+    'objects',
+    'objects_transformation'
 ]
 
 def create_pg_connection():
@@ -48,18 +48,9 @@ def create_mysql_connection():
     cursor = conn.cursor()
     return cursor
 
-def get_mysql_tables():
-    cursor = create_mysql_connection()
-    cursor.execute(""" SHOW TABLES """)
-    result = cursor.fetchall()
-    for table in result:
-        yield table[0]
 
 
 if __name__=="__main__":
-    # TABLES_LIST = []
-    # for table in get_mysql_tables():
-    #     TABLES_LIST.append(table)
     connectionObject = pymysql.connect(host='127.0.0.1', user='root', password='Sam12345#',
                                      db='mysql', charset="utf8mb4",cursorclass=pymysql.cursors.DictCursor)
     

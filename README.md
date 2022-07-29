@@ -22,7 +22,7 @@ In this case, your AI startup has gotten some sales, some revenue, and some publ
 
 
 ## Screenshots
-![Example screenshot](./image/dbt.png)
+![Example screenshot](./images/dbt.png)
 
 ## Technologies
 * Airflow

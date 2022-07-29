@@ -14,13 +14,13 @@ with DAG(dag_id='transform_data', default_args=default_args) as dag:
 
     dbt_run = BashOperator(
         task_id='transform',
-        bash_command='dbt run --projects_dir ~/Desktop/10_acad/week_11/data_warehouse/dbt/postgres_dwh1',
+        bash_command='dbt run --projects_dir ~/Desktop/10_acad/week_12/data_warehouse/dbt/mysql_dwh',
         dag=dag
     )
 
     dbt_test = BashOperator(
         task_id='moving_average_calc',
-        bash_command='dbt test --projects_dir ~/Desktop/10_acad/week_11/data_warehouse/dbt/postgres_dwh1'
+        bash_command='dbt test --projects_dir ~/Desktop/10_acad/week_12/data_warehouse/dbt/mysql_dwh'
     )
 
     dbt_run >> dbt_test

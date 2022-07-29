@@ -1,7 +1,7 @@
--- CREATE DATABASE IF NOT EXISTS `city_traffic`;
+
 CREATE TABLE IF NOT EXISTS  'objects' (
    'track_id' INT Primary KEY,
-   'type' varchar(20),
+   'type1' varchar(20),
    'traveled_d' REAL,
    'avg_speed' REAL,
    'lat' REAL,
@@ -9,5 +9,5 @@ CREATE TABLE IF NOT EXISTS  'objects' (
    'speed' REAL, 
    'lon_acc' REAL,
    'lat_acc' REAL,
-   'time' REAL,
+   'time1' REAL,
 );

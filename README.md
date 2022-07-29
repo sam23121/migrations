@@ -1,4 +1,4 @@
-# Data Pipeline for drone data
+# Data Migration
 the main purpose of this project is able to migrate from one database to another while this is a common thing when busniess expands
 
 previous project was used as an intial point to migrate from

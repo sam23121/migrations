@@ -4,12 +4,12 @@ from supersetapiclient.client import SupersetClient
 # create api client instance for superset
 client = SupersetClient(
     host="http://localhost:8080",
-    username="admin",
-    password="admin",
+    username="sam",
+    password="sam123",
 )
 # Create API client instance for redash
 Redash = RedashAPIClient()
-res = Redash.get('dashboard')
+res = Redash.get('dashboards')
 res.json()
 
 
